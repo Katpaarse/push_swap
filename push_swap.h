@@ -3,10 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jukerste <jukerste@student.42.fr>          +#+  +:+       +#+        */
+/*   By: kat <kat@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/08 17:57:29 by jukerste          #+#    #+#             */
-/*   Updated: 2025/03/08 17:57:30 by jukerste         ###   ########.fr       */
+/*   Updated: 2025/03/10 12:21:33 by kat              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef push_swap_h
+# define push_swap_h
+
+typedef struct
+
+
+
+#endif
