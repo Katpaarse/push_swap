@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jukerste <jukerste@student.42.fr>          +#+  +:+       +#+        */
+/*   By: kat <kat@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/10 12:21:50 by kat               #+#    #+#             */
-/*   Updated: 2025/03/11 16:38:35 by jukerste         ###   ########.fr       */
+/*   Updated: 2025/03/12 13:02:03 by kat              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,15 @@
 
 int main(int argc, char **argv)
 {
+	t_stack a;
+	t_stack b;
+
+	a.top = NULL;
+	a.size  = 0;
+	
+	b.top = NULL;
+	b.size = 0;
+	
 	if (argc < 2)
 		return (0);
-	argv = 0;
 }
