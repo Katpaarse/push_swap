@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   parser.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kat <kat@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: jukerste <jukerste@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/25 15:15:53 by jukerste          #+#    #+#             */
-/*   Updated: 2025/03/26 11:53:57 by kat              ###   ########.fr       */
+/*   Updated: 2025/03/26 17:23:01 by jukerste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int	is_valid_number(char *str)
 		return (write(2, "Error\n", 6), 1);
 	if (str[i] == '-' || str[i] == '+')
 		i++;
-	if (str[i] == '\0') // check for a number after the sign
+	if (str[i] == '\0')
 		return (write(2, "Error\n", 6), 1);
 	while (str[i])
 	{
@@ -30,8 +30,22 @@ int	is_valid_number(char *str)
 			return (write(2, "Error\n", 6), 1);
 		i++;
 	}
-	num = ft_atoi(str); // test if this works with under/overflow
+	num = ft_atol(str);
 	if (num < INT_MIN || num > INT_MAX)
 		return (write(2, "Error\n", 6), 1);
+	return (0);
+}
+
+int	check_duplicate_numbers(t_node *head, int num)
+{
+	t_node *current;
+	
+	current = head;
+	while (current != NULL)
+	{
+		if (current->value == num)
+			return (1);
+		current = current->next;
+	}
 	return (0);
 }

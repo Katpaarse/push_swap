@@ -6,7 +6,7 @@
 /*   By: jukerste <jukerste@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/08 17:57:29 by jukerste          #+#    #+#             */
-/*   Updated: 2025/03/25 15:27:48 by jukerste         ###   ########.fr       */
+/*   Updated: 2025/03/26 16:12:59 by jukerste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 # include <limits.h>
 # include <stdarg.h>
 # include <stdlib.h>
-#include "../src/libft/libft.h"
+# include "../src/libft/libft.h"
 
 typedef struct s_node
 {
