@@ -6,7 +6,7 @@
 /*   By: jukerste <jukerste@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/10 12:21:50 by kat               #+#    #+#             */
-/*   Updated: 2025/03/26 16:14:29 by jukerste         ###   ########.fr       */
+/*   Updated: 2025/04/01 18:01:54 by jukerste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,15 @@
 
 int	main(int argc, char **argv)
 {
-	t_stack	a;
-	t_stack	b;
-
-	a.top = NULL;
-	a.size = 0;
-	b.top = NULL;
-	b.size = 0;
+	t_node	*stack_a;
+	
 	if (argc < 2)
-		return (0);
-	is_valid_number(argv[1]);
+		return (1);
+	stack_a = make_stack_a(argv + 1);
+	if (stack_a == NULL)
+		return (write(2, "Error\n", 6), 1);
+
+	// sorting logic gaat hierzo.
+	free_lst(stack_a);
+	// return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: jukerste <jukerste@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/08 17:57:29 by jukerste          #+#    #+#             */
-/*   Updated: 2025/03/26 16:12:59 by jukerste         ###   ########.fr       */
+/*   Updated: 2025/04/01 18:03:05 by jukerste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,12 +26,11 @@ typedef struct s_node
 	struct s_node	*next;
 }					t_node;
 
-typedef struct s_stack
-{
-	t_node	*top;
-	int		size;
-}			t_stack;
-
-int	is_valid_number(char *str);
+int		is_valid_number(char *str);
+int		check_duplicate_numbers(t_node *head, int num);
+t_node	*ft_lstnew_ps(int value);
+void	ft_lstadd_back_ps(t_node **lst, t_node *new);
+t_node	*make_stack_a(char **argv);
+void	free_lst(t_node *head);
 
 #endif
