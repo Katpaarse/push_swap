@@ -1,7 +1,7 @@
 NAME = push_swap
 CC = cc
 CFLAGS = -Wall -Werror -Wextra
-CFILES = src/main.c src/parser.c src/utils.c
+CFILES = src/main.c src/parser.c src/utils.c src/swap_operations.c src/print_stack.c src/push_operations.c
 OFILES = $(CFILES:.c=.o)
 LIBFTDIR = ./src/libft
 LIBFT = $(LIBFTDIR)/libft.a

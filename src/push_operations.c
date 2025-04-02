@@ -1,41 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   parser.c                                           :+:      :+:    :+:   */
+/*   push_operations.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jukerste <jukerste@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/25 15:15:53 by jukerste          #+#    #+#             */
-/*   Updated: 2025/04/02 19:08:59 by jukerste         ###   ########.fr       */
+/*   Created: 2025/04/02 17:20:23 by jukerste          #+#    #+#             */
+/*   Updated: 2025/04/02 19:09:46 by jukerste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
 
-int	is_valid_number(char *str)
+void	push(t_node *stack_a, t_node *stack_b)
 {
-	long long	num;
-	char		*str2;
+	t_node *temp;
 
-	if (str[0] == '\0')
-		return (1);
-	num = ft_atoi(str);
-	str2 = ft_itoa(num);
-	if (ft_strncmp(str, str2, ft_strlen(str)) != 0)
-		return (1);
-	return (0);
-}
-
-int	check_duplicate_numbers(t_node *head, int num)
-{
-	t_node *current;
-	
-	current = head;
-	while (current != NULL)
-	{
-		if (current->value == num)
-			return (1);
-		current = current->next;
-	}
-	return (0);
+	if (stack_a == NULL || stack_b == NULL)
+		return ;
+	temp = stack_a->next;
+	stack_b = stack_a->next;
 }

@@ -1,41 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   parser.c                                           :+:      :+:    :+:   */
+/*   print_stack.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jukerste <jukerste@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/25 15:15:53 by jukerste          #+#    #+#             */
-/*   Updated: 2025/04/02 19:08:59 by jukerste         ###   ########.fr       */
+/*   Created: 2025/04/02 15:50:30 by jukerste          #+#    #+#             */
+/*   Updated: 2025/04/02 16:22:07 by jukerste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
 
-int	is_valid_number(char *str)
+void	print_stacks(t_node *stack_a, t_node *stack_b)
 {
-	long long	num;
-	char		*str2;
-
-	if (str[0] == '\0')
-		return (1);
-	num = ft_atoi(str);
-	str2 = ft_itoa(num);
-	if (ft_strncmp(str, str2, ft_strlen(str)) != 0)
-		return (1);
-	return (0);
+	ft_printf("stack a: \n=====\n");
+	print_stack(stack_a);
+	ft_printf("-----\n\n");
+	ft_printf("stack b: \n=====\n");
+	print_stack(stack_b);
+	ft_printf("-----\n\n");
 }
 
-int	check_duplicate_numbers(t_node *head, int num)
+void	print_stack(t_node *stack)
 {
-	t_node *current;
-	
-	current = head;
-	while (current != NULL)
+	while (stack)
 	{
-		if (current->value == num)
-			return (1);
-		current = current->next;
+	ft_printf("%i\n", stack->value);
+		stack = stack->next;
 	}
-	return (0);
 }
+
