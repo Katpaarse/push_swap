@@ -1,37 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_operations.c                                  :+:      :+:    :+:   */
+/*   rotate_operations.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jukerste <jukerste@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/02 17:20:23 by jukerste          #+#    #+#             */
-/*   Updated: 2025/04/05 17:35:49 by jukerste         ###   ########.fr       */
+/*   Created: 2025/04/05 17:05:27 by jukerste          #+#    #+#             */
+/*   Updated: 2025/04/05 17:50:56 by jukerste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
 
-void	push(t_node **src, t_node **dest)
+void	rotate(t_node **stack)
 {
-	t_node *temp;
-
-	if (*src == NULL)
+	t_node	*first;
+	t_node	*last;
+	
+	if (*stack == NULL || (*stack)->next == NULL)
 		return ;
-	temp = *src;
-	*src = (*src)->next;
-	temp->next = *dest;
-	*dest = temp;
+	first = *stack;
+	*stack = first->next;
+	first->next = NULL;
+	last = *stack;
+	while (last->next)
+		last = last->next;
+	last->next = first;
 }
-
-void	push_a(t_node **stack_b, t_node **stack_a)
+void	rotate_a(t_node **stack_a, t_node **stack_b)
 {
-	push(stack_b, stack_a);
-	ft_printf("pa\n");
+	(void)stack_b;
+	rotate(stack_a);
+	ft_printf("ra\n");
 }
-
-void	push_b(t_node **stack_a, t_node **stack_b)
+void	rotate_b(t_node **stack_a, t_node **stack_b)
 {
-	push(stack_a, stack_b);
-	ft_printf("pb\n");
+	(void)stack_a;
+	rotate(stack_b);
+	ft_printf("rb\n");
 }

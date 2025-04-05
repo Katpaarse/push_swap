@@ -6,7 +6,7 @@
 /*   By: jukerste <jukerste@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/01 14:05:41 by jukerste          #+#    #+#             */
-/*   Updated: 2025/04/02 19:03:03 by jukerste         ###   ########.fr       */
+/*   Updated: 2025/04/05 18:16:00 by jukerste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,5 +75,5 @@ void	free_and_exit(t_node *head)
 		free(head);
 		head = temp;
 	}
-	exit(EXIT_SUCCESS);
+	exit(1);
 }

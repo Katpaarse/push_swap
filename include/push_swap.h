@@ -6,7 +6,7 @@
 /*   By: jukerste <jukerste@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/08 17:57:29 by jukerste          #+#    #+#             */
-/*   Updated: 2025/04/02 17:16:24 by jukerste         ###   ########.fr       */
+/*   Updated: 2025/04/05 17:36:22 by jukerste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,5 +38,11 @@ void	swap(t_node *stack);
 void	swap_a(t_node *stack_a, t_node *stack_b);
 void	swap_b(t_node *stack_a, t_node *stack_b);
 void	swap_swap(t_node *stack_a, t_node *stack_b);
+void	push(t_node **src, t_node **dest);
+void	push_a(t_node **stack_b, t_node **stack_a);
+void	push_b(t_node **stack_a, t_node **stack_b);
+void	rotate(t_node **stack);
+void	rotate_a(t_node **stack_a, t_node **stack_b);
+void	rotate_b(t_node **stack_a, t_node **stack_b);
 
 #endif
