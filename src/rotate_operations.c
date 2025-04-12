@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   rotate_operations.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jukerste <jukerste@student.42.fr>          +#+  +:+       +#+        */
+/*   By: kat <kat@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/05 17:05:27 by jukerste          #+#    #+#             */
-/*   Updated: 2025/04/05 17:50:56 by jukerste         ###   ########.fr       */
+/*   Updated: 2025/04/10 20:57:20 by kat              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,12 +27,14 @@ void	rotate(t_node **stack)
 		last = last->next;
 	last->next = first;
 }
+
 void	rotate_a(t_node **stack_a, t_node **stack_b)
 {
 	(void)stack_b;
 	rotate(stack_a);
 	ft_printf("ra\n");
 }
+
 void	rotate_b(t_node **stack_a, t_node **stack_b)
 {
 	(void)stack_a;
