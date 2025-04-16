@@ -6,7 +6,7 @@
 /*   By: jukerste <jukerste@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/08 17:57:29 by jukerste          #+#    #+#             */
-/*   Updated: 2025/04/05 17:36:22 by jukerste         ###   ########.fr       */
+/*   Updated: 2025/04/16 16:19:01 by jukerste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,5 +44,11 @@ void	push_b(t_node **stack_a, t_node **stack_b);
 void	rotate(t_node **stack);
 void	rotate_a(t_node **stack_a, t_node **stack_b);
 void	rotate_b(t_node **stack_a, t_node **stack_b);
+void	reverse_rotate(t_node **stack);
+void	reverse_rotate_a(t_node **stack_a, t_node **stack_b);
+void	reverse_rotate_b(t_node **stack_a, t_node **stack_b);
+void	reverse_rotate_both(t_node **stack_a, t_node **stack_b);
+void	sorting_two_numbers(t_node **stack_a);
+void	sorting_three_numbers(t_node **stack_a);
 
 #endif
