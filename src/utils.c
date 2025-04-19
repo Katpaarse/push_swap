@@ -6,7 +6,7 @@
 /*   By: jukerste <jukerste@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/01 14:05:41 by jukerste          #+#    #+#             */
-/*   Updated: 2025/04/05 18:16:00 by jukerste         ###   ########.fr       */
+/*   Updated: 2025/04/19 17:37:15 by jukerste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ t_node	*make_stack_a(char **argv)
 	i = 0;
 	while (argv[i])
 	{
-		if (is_valid_number(argv[i]) == 1)
+		if (is_valid_number(argv[i]) == -1)
 			return (NULL);
 		num = ft_atoi(argv[i]);
 		new_node = ft_lstnew_ps((int)num);
@@ -75,5 +75,17 @@ void	free_and_exit(t_node *head)
 		free(head);
 		head = temp;
 	}
-	exit(1);
+	exit(-1);
+}
+int	stack_size(t_node *stack)
+{
+	int	size;
+
+	size =0;
+	while (stack)
+	{
+		size++;
+		stack = stack->next;
+	}
+	return (size);
 }

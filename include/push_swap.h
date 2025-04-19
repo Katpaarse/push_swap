@@ -6,7 +6,7 @@
 /*   By: jukerste <jukerste@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/08 17:57:29 by jukerste          #+#    #+#             */
-/*   Updated: 2025/04/16 16:19:01 by jukerste         ###   ########.fr       */
+/*   Updated: 2025/04/19 17:31:02 by jukerste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ int		check_duplicate_numbers(t_node *head, int num);
 t_node	*ft_lstnew_ps(int value);
 void	ft_lstadd_back_ps(t_node **lst, t_node *new);
 t_node	*make_stack_a(char **argv);
+int		stack_size(t_node *stack);
 void	free_and_exit(t_node *head);
 void	print_stack(t_node *stack);
 void	print_stacks(t_node *stack_a, t_node *stack_b);
@@ -50,5 +51,7 @@ void	reverse_rotate_b(t_node **stack_a, t_node **stack_b);
 void	reverse_rotate_both(t_node **stack_a, t_node **stack_b);
 void	sorting_two_numbers(t_node **stack_a);
 void	sorting_three_numbers(t_node **stack_a);
+void	sorting_five_numbers(t_node **stack_a, t_node **stack_b);
+int		is_sorted(t_node *stack);
 
 #endif
