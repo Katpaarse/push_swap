@@ -6,7 +6,7 @@
 /*   By: jukerste <jukerste@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/10 12:21:50 by kat               #+#    #+#             */
-/*   Updated: 2025/04/19 18:03:30 by jukerste         ###   ########.fr       */
+/*   Updated: 2025/04/19 18:29:37 by jukerste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ int	main(int argc, char **argv)
 		sorting_two_numbers(&stack_a);
 	else if (size == 3)
 		sorting_three_numbers(&stack_a);
-	else if (size == 4)
+	else if (size == 4 || size == 5)
 		sorting_five_numbers(&stack_a, &stack_b);
 	else
 	{

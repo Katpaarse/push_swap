@@ -6,7 +6,7 @@
 /*   By: jukerste <jukerste@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/01 14:05:41 by jukerste          #+#    #+#             */
-/*   Updated: 2025/04/19 17:37:15 by jukerste         ###   ########.fr       */
+/*   Updated: 2025/04/19 18:16:47 by jukerste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,7 +81,7 @@ int	stack_size(t_node *stack)
 {
 	int	size;
 
-	size =0;
+	size = 0;
 	while (stack)
 	{
 		size++;

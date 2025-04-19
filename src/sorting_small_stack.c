@@ -6,7 +6,7 @@
 /*   By: jukerste <jukerste@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/09 14:06:28 by kat               #+#    #+#             */
-/*   Updated: 2025/04/19 18:05:30 by jukerste         ###   ########.fr       */
+/*   Updated: 2025/04/19 18:30:49 by jukerste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,13 +52,15 @@ void	sorting_five_numbers(t_node **stack_a, t_node **stack_b)
 
 	size = stack_size(*stack_a);
 	pushed = 0;
-
+	// ft_printf("%i", size);
+	// (void)stack_b;
 	while (size > 3 && pushed < 2)
 	{
 		if ((*stack_a)->index == 0 || (*stack_a)->index == 1)
 		{
 			push_b(stack_a, stack_b);
 			pushed++;
+			size--; //check later
 		}
 		else
 			rotate_a(stack_a, stack_b);
@@ -69,6 +71,7 @@ void	sorting_five_numbers(t_node **stack_a, t_node **stack_b)
 	push_a(stack_b, stack_a);
 	push_a(stack_b, stack_a);	
 }
+
 int	is_sorted(t_node *stack)
 {
 	while (stack && stack->next)
