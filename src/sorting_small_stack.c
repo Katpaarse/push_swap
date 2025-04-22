@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sorting_small_stack.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jukerste <jukerste@student.42.fr>          +#+  +:+       +#+        */
+/*   By: kat <kat@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/09 14:06:28 by kat               #+#    #+#             */
-/*   Updated: 2025/04/22 14:40:10 by jukerste         ###   ########.fr       */
+/*   Updated: 2025/04/22 16:09:48 by kat              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,13 +63,7 @@ void	sorting_five_numbers(t_node **stack_a, t_node **stack_b)
 	if (*stack_a)
 		sorting_three_numbers(stack_a);
 	while (*stack_b)
-	{
-		while (*stack_a && (*stack_a)->index < (*stack_b)->index && (*stack_a)->next)
-			rotate_a(stack_a, NULL);
-		if (*stack_a && (*stack_a)->index < (*stack_b)->index && !(*stack_a)->next)
-			rotate_a(stack_a, NULL);
 		push_a(stack_b, stack_a);
-	}
 }
 
 t_node	*find_smallest_index(t_node *stack)
