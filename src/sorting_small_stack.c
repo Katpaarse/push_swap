@@ -6,7 +6,7 @@
 /*   By: kat <kat@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/09 14:06:28 by kat               #+#    #+#             */
-/*   Updated: 2025/04/20 01:45:47 by kat              ###   ########.fr       */
+/*   Updated: 2025/04/20 18:52:13 by kat              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ void	sorting_five_numbers(t_node **stack_a, t_node **stack_b)
 	}
 	sorting_three_numbers(stack_a);
 	if ((*stack_b)->index < (*stack_b)->next->index)
-		swap_b(*stack_a, NULL);
+		swap_b(*stack_b, NULL);
 	push_a(stack_b, stack_a);
 	push_a(stack_b, stack_a);	
 }
