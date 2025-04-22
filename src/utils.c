@@ -3,44 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kat <kat@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: jukerste <jukerste@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/01 14:05:41 by jukerste          #+#    #+#             */
-/*   Updated: 2025/04/20 01:47:34 by kat              ###   ########.fr       */
+/*   Updated: 2025/04/22 14:24:03 by jukerste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
-
-t_node	*ft_lstnew_ps(int value)
-{
-	t_node	*new;
-
-	new = malloc(sizeof(t_node));
-	if (new == NULL)
-		return (NULL);
-	new->value = value;
-	new->index = -1;
-	new->next = NULL;
-	return (new);
-}
-
-void	ft_lstadd_back_ps(t_node **lst, t_node *new)
-{
-	t_node	*last;
-
-	if (lst == NULL || new == NULL)
-		return ;
-	if (*lst == NULL)
-	{
-		*lst = new;
-		return ;
-	}
-	last = *lst;
-	while (last->next)
-		last = last->next;
-	last->next = new;
-}
 
 t_node	*make_stack_a(char **argv)
 {
@@ -77,6 +47,7 @@ void	free_and_exit(t_node *head)
 	}
 	exit(-1);
 }
+
 int	stack_size(t_node *stack)
 {
 	int	size;
@@ -88,4 +59,25 @@ int	stack_size(t_node *stack)
 		stack = stack->next;
 	}
 	return (size);
+}
+void	assign_index(t_node *stack)
+{
+	t_node	*current;
+	t_node	*compare;
+	int		i;
+	
+	current = stack;
+	while (current)
+	{
+		i = 0;
+		compare = stack;
+	while (compare)
+	{
+		if (compare->value < current->value)
+			i++;
+		compare = compare->next;
+	}
+	current->index = i;
+	current = current->next;
+	}
 }

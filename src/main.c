@@ -6,7 +6,7 @@
 /*   By: jukerste <jukerste@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/10 12:21:50 by kat               #+#    #+#             */
-/*   Updated: 2025/04/19 18:29:37 by jukerste         ###   ########.fr       */
+/*   Updated: 2025/04/22 14:26:12 by jukerste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ int	main(int argc, char **argv)
 	stack_a = make_stack_a(argv + 1);
 	if (stack_a == NULL)
 		return (write(2, "Error\n", 6), -1);
+	assign_index(stack_a);
 	print_stack(stack_a);
 	size = stack_size(stack_a);
 	if (is_sorted(stack_a))

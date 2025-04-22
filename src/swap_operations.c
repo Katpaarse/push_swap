@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   swap_operations.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kat <kat@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: jukerste <jukerste@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/02 15:25:09 by jukerste          #+#    #+#             */
-/*   Updated: 2025/04/10 20:56:50 by kat              ###   ########.fr       */
+/*   Updated: 2025/04/22 14:05:11 by jukerste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,17 @@
 
 void	swap(t_node *stack)
 {
-	int temp;
+	int temp_value;
+	int	temp_index;
 	
 	if (stack == NULL || stack->next == NULL)
 		return ;
-	temp = stack->value;
+	temp_value = stack->value;
+	temp_index = stack->index;
 	stack->value = stack->next->value;
-	stack->next->value = temp;
+	stack->index = stack->next->index;
+	stack->next->value = temp_value;
+	stack->next->index = temp_index;
 }
 
 void	swap_a(t_node *stack_a, t_node *stack_b)

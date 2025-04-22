@@ -6,7 +6,7 @@
 /*   By: jukerste <jukerste@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/16 14:22:41 by jukerste          #+#    #+#             */
-/*   Updated: 2025/04/16 15:42:03 by jukerste         ###   ########.fr       */
+/*   Updated: 2025/04/22 14:55:01 by jukerste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ void	reverse_rotate(t_node **stack)
 	}
 	if (prev)
 		prev->next = NULL;
-	last ->next = *stack;
+	last->next = *stack;
 	*stack = last;
 }
 
