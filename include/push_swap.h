@@ -6,7 +6,7 @@
 /*   By: jukerste <jukerste@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/08 17:57:29 by jukerste          #+#    #+#             */
-/*   Updated: 2025/04/22 14:25:11 by jukerste         ###   ########.fr       */
+/*   Updated: 2025/04/23 13:23:28 by jukerste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,7 @@ void	reverse_rotate_b(t_node **stack_a, t_node **stack_b);
 void	reverse_rotate_both(t_node **stack_a, t_node **stack_b);
 void	sorting_two_numbers(t_node **stack_a);
 void	sorting_three_numbers(t_node **stack_a);
+void	sorting_four_numbers(t_node **stack_a, t_node **stack_b);
 void	sorting_five_numbers(t_node **stack_a, t_node **stack_b);
 int		is_sorted(t_node *stack);
 t_node	*find_smallest_index(t_node *stack);

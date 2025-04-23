@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sorting_small_stack.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kat <kat@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: jukerste <jukerste@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/09 14:06:28 by kat               #+#    #+#             */
-/*   Updated: 2025/04/22 16:09:48 by kat              ###   ########.fr       */
+/*   Updated: 2025/04/23 13:23:17 by jukerste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,6 +66,20 @@ void	sorting_five_numbers(t_node **stack_a, t_node **stack_b)
 		push_a(stack_b, stack_a);
 }
 
+void	sorting_four_numbers(t_node **stack_a, t_node **stack_b)
+{
+	t_node *smallest;
+	
+	if (is_sorted(*stack_a))
+		return ;
+	smallest = find_smallest_index(*stack_a);
+	while (*stack_a != smallest)
+		rotate_a(stack_a, NULL);
+	push_b(stack_a, stack_b);
+	sorting_three_numbers(stack_a);
+	push_a(stack_b, stack_a);
+}
+
 t_node	*find_smallest_index(t_node *stack)
 {
 	t_node *smallest_node;
@@ -82,15 +96,4 @@ t_node	*find_smallest_index(t_node *stack)
 		current = current->next;
 	}
 	return (smallest_node);
-}
-
-int	is_sorted(t_node *stack)
-{
-	while (stack && stack->next)
-	{
-		if (stack->value > stack->next->value)
-			return (0);
-		stack = stack->next;
-	}
-	return (1);
 }

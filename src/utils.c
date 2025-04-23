@@ -6,7 +6,7 @@
 /*   By: jukerste <jukerste@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/01 14:05:41 by jukerste          #+#    #+#             */
-/*   Updated: 2025/04/22 14:24:03 by jukerste         ###   ########.fr       */
+/*   Updated: 2025/04/23 13:14:00 by jukerste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,4 +80,15 @@ void	assign_index(t_node *stack)
 	current->index = i;
 	current = current->next;
 	}
+}
+
+int	is_sorted(t_node *stack)
+{
+	while (stack && stack->next)
+	{
+		if (stack->value > stack->next->value)
+			return (0);
+		stack = stack->next;
+	}
+	return (1);
 }
