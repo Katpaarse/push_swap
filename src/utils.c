@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jukerste <jukerste@student.42.fr>          +#+  +:+       +#+        */
+/*   By: kat <kat@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/01 14:05:41 by jukerste          #+#    #+#             */
-/*   Updated: 2025/04/23 13:14:00 by jukerste         ###   ########.fr       */
+/*   Updated: 2025/04/23 18:36:23 by kat              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,19 +33,6 @@ t_node	*make_stack_a(char **argv)
 		i++;
 	}
 	return (head);
-}
-
-void	free_and_exit(t_node *head)
-{
-	t_node	*temp;
-
-	while (head)
-	{
-		temp = head->next;
-		free(head);
-		head = temp;
-	}
-	exit(-1);
 }
 
 int	stack_size(t_node *stack)
