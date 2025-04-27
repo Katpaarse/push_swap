@@ -6,7 +6,7 @@
 /*   By: jukerste <jukerste@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/02 15:50:30 by jukerste          #+#    #+#             */
-/*   Updated: 2025/04/02 16:22:07 by jukerste         ###   ########.fr       */
+/*   Updated: 2025/04/27 20:32:53 by jukerste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,4 +30,3 @@ void	print_stack(t_node *stack)
 		stack = stack->next;
 	}
 }
-

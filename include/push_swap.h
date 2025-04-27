@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kat <kat@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: jukerste <jukerste@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/08 17:57:29 by jukerste          #+#    #+#             */
-/*   Updated: 2025/04/23 18:38:01 by kat              ###   ########.fr       */
+/*   Updated: 2025/04/27 19:01:24 by jukerste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,6 @@ t_node	*ft_lstnew_ps(int value);
 void	ft_lstadd_back_ps(t_node **lst, t_node *new);
 t_node	*make_stack_a(char **argv);
 int		stack_size(t_node *stack);
-void	free_and_exit(t_node *head);
 void	free_list(t_node *head);
 void	assign_index(t_node *stack);
 void	print_stack(t_node *stack);
@@ -56,6 +55,7 @@ void	sort_three_numbers(t_node **stack_a);
 void	sort_four_numbers(t_node **stack_a, t_node **stack_b);
 void	sort_five_numbers(t_node **stack_a, t_node **stack_b);
 int		is_sorted(t_node *stack);
+void	radix_sort(t_node **stack_a, t_node **stack_b);
 t_node	*find_smallest_index(t_node *stack);
 
 #endif

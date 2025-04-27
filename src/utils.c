@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kat <kat@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: jukerste <jukerste@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/01 14:05:41 by jukerste          #+#    #+#             */
-/*   Updated: 2025/04/23 18:36:23 by kat              ###   ########.fr       */
+/*   Updated: 2025/04/27 18:52:25 by jukerste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ t_node	*make_stack_a(char **argv)
 		num = ft_atoi(argv[i]);
 		new_node = ft_lstnew_ps((int)num);
 		if (new_node == NULL)
-			free_and_exit(head);
+			free_list(head);
 		ft_lstadd_back_ps(&head, new_node);
 		i++;
 	}

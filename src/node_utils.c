@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   node_utils.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kat <kat@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: jukerste <jukerste@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/22 14:16:33 by jukerste          #+#    #+#             */
-/*   Updated: 2025/04/23 18:39:14 by kat              ###   ########.fr       */
+/*   Updated: 2025/04/27 20:33:13 by jukerste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,12 +40,6 @@ void	ft_lstadd_back_ps(t_node **lst, t_node *new)
 	while (last->next)
 		last = last->next;
 	last->next = new;
-}
-
-void	free_and_exit(t_node *head)
-{
-	free_list(head);
-	exit(1);
 }
 
 void	free_list(t_node *head)
