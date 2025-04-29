@@ -6,7 +6,7 @@
 /*   By: jukerste <jukerste@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/10 12:21:50 by kat               #+#    #+#             */
-/*   Updated: 2025/04/29 15:22:27 by jukerste         ###   ########.fr       */
+/*   Updated: 2025/04/29 15:43:32 by jukerste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,6 @@ int	main(int argc, char **argv)
 	if (argc < 2)
 		return (1);
 	stack_a = make_stack_a(argv + 1);
-	ft_printf("Initial stack size: %d\n", stack_size(stack_a));
 	if (stack_a == NULL)
 	{
 		write(2, "Error\n", 6);
