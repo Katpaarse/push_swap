@@ -6,7 +6,7 @@
 /*   By: jukerste <jukerste@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/02 15:25:09 by jukerste          #+#    #+#             */
-/*   Updated: 2025/04/22 14:05:11 by jukerste         ###   ########.fr       */
+/*   Updated: 2025/04/29 18:24:27 by jukerste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 void	swap(t_node *stack)
 {
-	int temp_value;
+	int	temp_value;
 	int	temp_index;
-	
+
 	if (stack == NULL || stack->next == NULL)
 		return ;
 	temp_value = stack->value;

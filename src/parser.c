@@ -6,7 +6,7 @@
 /*   By: jukerste <jukerste@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/25 15:15:53 by jukerste          #+#    #+#             */
-/*   Updated: 2025/04/29 16:36:42 by jukerste         ###   ########.fr       */
+/*   Updated: 2025/04/29 18:24:59 by jukerste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,8 +38,8 @@ int	is_valid_number(char *str)
 
 int	check_duplicate_numbers(t_node *head, int num)
 {
-	t_node *current;
-	
+	t_node	*current;
+
 	current = head;
 	while (current != NULL)
 	{

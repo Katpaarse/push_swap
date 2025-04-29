@@ -6,7 +6,7 @@
 /*   By: jukerste <jukerste@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/02 15:50:30 by jukerste          #+#    #+#             */
-/*   Updated: 2025/04/29 15:34:33 by jukerste         ###   ########.fr       */
+/*   Updated: 2025/04/29 18:18:29 by jukerste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void	print_stack(t_node *stack)
 {
 	while (stack)
 	{
-	ft_printf("%i\n", stack->value);
+		ft_printf("%i\n", stack->value);
 		stack = stack->next;
 	}
 }

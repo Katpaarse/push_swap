@@ -6,7 +6,7 @@
 /*   By: jukerste <jukerste@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/09 14:06:28 by kat               #+#    #+#             */
-/*   Updated: 2025/04/27 17:23:23 by jukerste         ###   ########.fr       */
+/*   Updated: 2025/04/29 18:27:39 by jukerste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,6 @@ void	sort_three_numbers(t_node **stack_a)
 	a = (*stack_a)->value;
 	b = (*stack_a)->next->value;
 	c = (*stack_a)->next->next->value;
-
 	if (a > b && b > c)
 	{
 		swap_a(*stack_a, NULL);
@@ -48,8 +47,8 @@ void	sort_three_numbers(t_node **stack_a)
 
 void	sort_four_numbers(t_node **stack_a, t_node **stack_b)
 {
-	t_node *smallest;
-	
+	t_node	*smallest;
+
 	if (is_sorted(*stack_a))
 		return ;
 	smallest = find_smallest_index(*stack_a);
@@ -72,7 +71,7 @@ void	sort_five_numbers(t_node **stack_a, t_node **stack_b)
 		while (*stack_a != smallest)
 			reverse_rotate_a(stack_a, NULL);
 		push_b(stack_a, stack_b);
-		pushed++;	
+		pushed++;
 	}
 	if (*stack_a)
 		sort_three_numbers(stack_a);
@@ -82,9 +81,9 @@ void	sort_five_numbers(t_node **stack_a, t_node **stack_b)
 
 t_node	*find_smallest_index(t_node *stack)
 {
-	t_node *smallest_node;
-	t_node *current;
-	
+	t_node	*smallest_node;
+	t_node	*current;
+
 	smallest_node = stack;
 	current = stack->next;
 	if (stack == NULL)

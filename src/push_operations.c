@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_operations.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kat <kat@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: jukerste <jukerste@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/02 17:20:23 by jukerste          #+#    #+#             */
-/*   Updated: 2025/04/10 20:57:42 by kat              ###   ########.fr       */
+/*   Updated: 2025/04/29 18:18:46 by jukerste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	push(t_node **src, t_node **dest)
 {
-	t_node *temp;
+	t_node	*temp;
 
 	if (*src == NULL)
 		return ;

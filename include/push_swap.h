@@ -6,7 +6,7 @@
 /*   By: jukerste <jukerste@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/08 17:57:29 by jukerste          #+#    #+#             */
-/*   Updated: 2025/04/27 19:01:24 by jukerste         ###   ########.fr       */
+/*   Updated: 2025/04/29 18:13:52 by jukerste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,9 @@ void	sort_four_numbers(t_node **stack_a, t_node **stack_b);
 void	sort_five_numbers(t_node **stack_a, t_node **stack_b);
 int		is_sorted(t_node *stack);
 void	radix_sort(t_node **stack_a, t_node **stack_b);
+void	radix_pass(t_node **stack_a, t_node **stack_b, int bit, int size);
+int		find_max_bits(int size);
 t_node	*find_smallest_index(t_node *stack);
+void	choose_sorting(t_node **stack_a, t_node **stack_b, int size);
 
 #endif

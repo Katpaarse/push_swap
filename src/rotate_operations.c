@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   rotate_operations.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kat <kat@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: jukerste <jukerste@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/05 17:05:27 by jukerste          #+#    #+#             */
-/*   Updated: 2025/04/10 20:57:20 by kat              ###   ########.fr       */
+/*   Updated: 2025/04/29 18:18:55 by jukerste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	rotate(t_node **stack)
 {
 	t_node	*first;
 	t_node	*last;
-	
+
 	if (*stack == NULL || (*stack)->next == NULL)
 		return ;
 	first = *stack;

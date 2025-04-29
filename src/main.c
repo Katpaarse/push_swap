@@ -6,11 +6,25 @@
 /*   By: jukerste <jukerste@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/10 12:21:50 by kat               #+#    #+#             */
-/*   Updated: 2025/04/29 16:49:01 by jukerste         ###   ########.fr       */
+/*   Updated: 2025/04/29 18:16:59 by jukerste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
+
+void	choose_sorting(t_node **stack_a, t_node **stack_b, int size)
+{
+	if (size == 2)
+		sort_two_numbers(stack_a);
+	else if (size == 3)
+		sort_three_numbers(stack_a);
+	else if (size == 4)
+		sort_four_numbers(stack_a, stack_b);
+	else if (size == 5)
+		sort_five_numbers(stack_a, stack_b);
+	else
+		radix_sort(stack_a, stack_b);
+}
 
 int	main(int argc, char **argv)
 {
@@ -35,16 +49,7 @@ int	main(int argc, char **argv)
 		free_list(stack_a);
 		return (0);
 	}
-	if (size == 2)
-		sort_two_numbers(&stack_a);
-	else if (size == 3)
-		sort_three_numbers(&stack_a);
-	else if (size == 4)
-		sort_four_numbers(&stack_a, &stack_b);
-	else if (size == 5)
-		sort_five_numbers(&stack_a, &stack_b);
-	else
-		radix_sort(&stack_a, &stack_b);
+	choose_sorting(&stack_a, &stack_b, size);
 	free_list(stack_a);
 	return (0);
 }
