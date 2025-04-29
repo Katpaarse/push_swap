@@ -6,7 +6,7 @@
 /*   By: jukerste <jukerste@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/23 14:08:07 by jukerste          #+#    #+#             */
-/*   Updated: 2025/04/27 21:06:03 by jukerste         ###   ########.fr       */
+/*   Updated: 2025/04/29 15:33:28 by jukerste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,35 +14,31 @@
 
 void	radix_sort(t_node **stack_a, t_node **stack_b)
 {
-	int	max_num;
 	int	max_bits;
 	int	i;
-	int	size;
+	int	j;
 	int	num;
-	int current_size;
+	int size;
 
 	size = stack_size(*stack_a);
-	max_num = size - 1;
 	max_bits = 0;
-	while ((max_num >> max_bits) != 0)
+	while ((size - 1) >> max_bits)
 		max_bits++;
 	i = 0;
 	while (i < max_bits)
 	{
-		current_size = size;
-		while (current_size > 0)
+		j = 0;
+		while (j < size)
 		{
-			if (*stack_a == NULL)
-				break ;
 			num = (*stack_a)->index;
 			if (((num >> i) & 1) == 0)
-				push_b(stack_b, stack_a);
+				push_b(stack_a, stack_b);
 			else
 				rotate_a(stack_a, NULL);
-			current_size--;
+			j++;
 		}
-		while (stack_size(*stack_b) > 0)
-			push_a(stack_a, stack_b);
+		while (*stack_b)
+			push_a(stack_b, stack_a);
 		i++;
 	}
 }
