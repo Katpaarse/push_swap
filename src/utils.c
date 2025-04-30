@@ -6,7 +6,7 @@
 /*   By: jukerste <jukerste@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/01 14:05:41 by jukerste          #+#    #+#             */
-/*   Updated: 2025/04/29 18:29:07 by jukerste         ###   ########.fr       */
+/*   Updated: 2025/04/30 16:17:24 by jukerste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,10 @@ t_node	*make_stack_a(char **argv)
 	i = 0;
 	while (argv[i])
 	{
-		if (is_valid_number(argv[i]) == -1)
+		if (is_valid_number(argv[i]) == 1)
 			return (NULL);
 		num = ft_atoi(argv[i]);
-		if (check_duplicate_numbers(head, num))
+		if (check_duplicate_numbers(head, num) == 1)
 			return (NULL);
 		new_node = ft_lstnew_ps((int)num);
 		if (new_node == NULL)

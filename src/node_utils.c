@@ -6,7 +6,7 @@
 /*   By: jukerste <jukerste@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/22 14:16:33 by jukerste          #+#    #+#             */
-/*   Updated: 2025/04/27 20:33:13 by jukerste         ###   ########.fr       */
+/*   Updated: 2025/04/30 15:42:21 by jukerste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,4 +52,35 @@ void	free_list(t_node *head)
 		free(head);
 		head = temp;
 	}
+}
+
+t_node	*find_smallest_index(t_node *stack)
+{
+	t_node	*smallest_node;
+	t_node	*current;
+
+	smallest_node = stack;
+	current = stack->next;
+	if (stack == NULL)
+		return (NULL);
+	while (current)
+	{
+		if (current->index < smallest_node->index)
+			smallest_node = current;
+		current = current->next;
+	}
+	return (smallest_node);
+}
+
+int	find_position(t_node *stack, t_node *target)
+{
+	int	place;
+
+	place = 0;
+	while (stack && stack != target)
+	{
+		stack = stack->next;
+		place++;
+	}
+	return (place);
 }
