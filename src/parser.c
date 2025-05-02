@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   parser.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kat <kat@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: jukerste <jukerste@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/25 15:15:53 by jukerste          #+#    #+#             */
-/*   Updated: 2025/04/30 18:15:19 by kat              ###   ########.fr       */
+/*   Updated: 2025/05/02 17:52:48 by jukerste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,16 @@ int	is_valid_number(char *str)
 	int		i;
 	long	num;
 
-	i = 0;
-	if (str == NULL || str[i] == '\0')
+	if (str == NULL || str[0] == '\0')
 		return (write(2, "Error\n", 6), -1);
-	if (str[i] == '-' || str[i] == '+')
+	i = 0;
+	if ((str[i] == '+') || (str[i] == '-' && str[i + 1] == '\0'))
+		return (write(2, "Error\n", 6), -1);
+	if (str[i] == '-' && str[i + 1] == '0' && str[i + 2] == '\0')
+		return (write(2, "Error\n", 6), -1);
+	if (str[i] == '-')
 		i++;
-	if (str[i] == '\0')
+	if (str[i] == '0' && str[i + 1] != '\0')
 		return (write(2, "Error\n", 6), -1);
 	while (str[i])
 	{

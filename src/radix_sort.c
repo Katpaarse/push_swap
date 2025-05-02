@@ -6,7 +6,7 @@
 /*   By: jukerste <jukerste@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/23 14:08:07 by jukerste          #+#    #+#             */
-/*   Updated: 2025/04/29 18:25:43 by jukerste         ###   ########.fr       */
+/*   Updated: 2025/05/02 16:46:03 by jukerste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,12 +25,12 @@ void	radix_sort(t_node **stack_a, t_node **stack_b)
 	i = 0;
 	while (i < max_bits)
 	{
-		radix_pass(stack_a, stack_b, i, size);
+		radix_part_two(stack_a, stack_b, i, size);
 		i++;
 	}
 }
 
-void	radix_pass(t_node **stack_a, t_node **stack_b, int bit, int size)
+void	radix_part_two(t_node **stack_a, t_node **stack_b, int bit, int size)
 {
 	int	pushed;
 	int	processed;
