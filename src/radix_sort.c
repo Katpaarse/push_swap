@@ -6,29 +6,11 @@
 /*   By: jukerste <jukerste@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/23 14:08:07 by jukerste          #+#    #+#             */
-/*   Updated: 2025/05/06 14:08:20 by jukerste         ###   ########.fr       */
+/*   Updated: 2025/05/06 14:11:53 by jukerste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
-
-void	radix_sort(t_node **stack_a, t_node **stack_b)
-{
-	int	i;
-	int	size;
-	int	max_bits;
-
-	size = stack_size(*stack_a);
-	max_bits = 0;
-	while ((size - 1) >> max_bits)
-		max_bits++;
-	i = 0;
-	while (i < max_bits)
-	{
-		radix_part_two(stack_a, stack_b, i, size);
-		i++;
-	}
-}
 
 void	radix_part_two(t_node **stack_a, t_node **stack_b, int bit, int size)
 {
@@ -54,5 +36,23 @@ void	radix_part_two(t_node **stack_a, t_node **stack_b, int bit, int size)
 	{
 		push_a(stack_b, stack_a);
 		pushed--;
+	}
+}
+
+void	radix_sort(t_node **stack_a, t_node **stack_b)
+{
+	int	i;
+	int	size;
+	int	max_bits;
+
+	size = stack_size(*stack_a);
+	max_bits = 0;
+	while ((size - 1) >> max_bits)
+		max_bits++;
+	i = 0;
+	while (i < max_bits)
+	{
+		radix_part_two(stack_a, stack_b, i, size);
+		i++;
 	}
 }
