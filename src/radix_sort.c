@@ -6,7 +6,7 @@
 /*   By: jukerste <jukerste@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/23 14:08:07 by jukerste          #+#    #+#             */
-/*   Updated: 2025/05/02 16:46:03 by jukerste         ###   ########.fr       */
+/*   Updated: 2025/05/06 14:08:20 by jukerste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,14 +55,4 @@ void	radix_part_two(t_node **stack_a, t_node **stack_b, int bit, int size)
 		push_a(stack_b, stack_a);
 		pushed--;
 	}
-}
-
-int	find_max_bits(int size)
-{
-	int	max_bits;
-
-	max_bits = 0;
-	while ((size - 1) >> max_bits)
-		max_bits++;
-	return (max_bits);
 }
